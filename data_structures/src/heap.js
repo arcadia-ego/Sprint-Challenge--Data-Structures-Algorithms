@@ -1,6 +1,22 @@
 const heapsort = (arr) => {
   /* Your code here */
-  
+  //take the index[i] of an array
+  //if it is greater than right. swap
+  //if not, do not swap
+  for(i = 0; i <= arr.length; i++){
+    let nextIndex = arr[i++];
+    let temp;
+    if(arr[i] > nextIndex ) {
+      temp = arr[i];
+      arr[i] = nextIndex;
+      nextIndex = temp;
+    } else {
+      if(arr[i] < nextIndex) {
+        return;
+      }
+    }
+  }
+  return arr;
 };
 
 class Heap {
